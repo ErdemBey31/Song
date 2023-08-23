@@ -84,7 +84,7 @@ def bul(_, message):
         duration = results[0]["duration"]
 
     except Exception as e:
-        m.edit("<b>⛔ **Üzgünüm şarkı bulunamadı.**</b>")
+        m.edit(f"<b>⛔ Üzgünüm şarkı bulunamadı.</b>\n\n<code> {e} </code>")
         print(str(e))
         return
     m.edit("<b>•> **İndirme Başladı...**</b>")
@@ -103,7 +103,7 @@ def bul(_, message):
         m.delete()
         bot.send_audio(chat_id=Config.PLAYLIST_ID, audio=audio_file, caption=rep, performer="ᴍᴘ3 ᴍᴜ̈ᴢɪᴋ ʙᴏᴛ", parse_mode='md', title=title, duration=dur, thumb=thumb_name)
     except Exception as e:
-        m.edit("<b>⛔ **Hatanın düzelmesini bekleyin** .</b>")
+        m.edit(f"<b>⛔ Üzgünüm şarkı bulunamadı.</b>\n\n<code> {e} </code>")
         print(e)
 
     try:
