@@ -5,3 +5,4 @@ class Config:
     API_ID = 14993791
     API_HASH = "60a2897e2d7de8eefd6cf610085b1f0a"
     BOT_OWNER = "6626904056" 
+    PLAYLIST_ID = "-1001817271872"
