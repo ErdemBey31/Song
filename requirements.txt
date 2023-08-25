@@ -4,5 +4,6 @@ youtube-dl
 youtube_search
 requests
 yt_dlp
+supervisor
 git+https://github.com/MehmetAtes21/Loading.git
 ffmpeg
