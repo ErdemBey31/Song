@@ -1,16 +1,13 @@
+from flask import Flask, render_template, request
 
-from http.server import SimpleHTTPRequestHandler
-from socketserver import TCPServer
+app = Flask(__name__)
 
-PORT = 8000
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    if request.method == 'POST':
+        name = request.form['name']
+        return f"Merhaba, {name}!"
+    return render_template('index.html')
 
-class MyHandler(SimpleHTTPRequestHandler):
-    def do_GET(self):
-        self.send_response(200)
-        self.send_header('Content-type', 'text/html')
-        self.end_headers()
-        self.wfile.write(b'Hello, world!')
-
-httpd = TCPServer(("", PORT), MyHandler)
-print("Web sunucusu çalışıyor...")
-httpd.serve_forever()
+if __name__ == '__main__':
+    app.run()
