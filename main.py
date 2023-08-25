@@ -10,3 +10,9 @@ t1.start();
 t2.start();
 t1.join();
 t2.join();
+try:
+  t1.daemon = True
+  t2.daemon = True
+  print("root aktif")
+except Exception as e:
+  print(f"ROOT HATA\n\n{e}")
