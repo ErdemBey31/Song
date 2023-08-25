@@ -1,6 +1,6 @@
-image: Previous Ubuntu
+image: Ubuntu
 
 build_script:
-  - pip install -r requirements.txt
+  - pip3 install -r requirements.txt
   - python3 bot.py & 
   - echo "bot calisyor"
