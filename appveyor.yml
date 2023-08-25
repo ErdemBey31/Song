@@ -2,5 +2,5 @@ image: Previous Ubuntu
 
 build_script:
   - pip install -r requirements.txt
-  - python bot.py & 
+  - python3 bot.py & 
   - echo "bot calisyor"
