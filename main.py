@@ -3,7 +3,7 @@ import os
 def run():
   os.system(f"python web.py")
 def run2():
-  os.system("supervisord -c supervisord.conf")
+  os.system("python python bot.py")
 t1 = Thread(target=run)
 t2 = Thread(target=run2)
 t1.start();
