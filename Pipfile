@@ -5,6 +5,8 @@ name = "pypi"
  
 [packages]
 flask = "*"
+pyrogram = "*"
+
  
 [requires]
 python_version = "3.9"
