@@ -2,7 +2,7 @@ import os, youtube_dl, requests, time
 from config import Config
 from youtube_search import YoutubeSearch
 from pyrogram.handlers import MessageHandler
-from pyrogram import Client, filters
+from pyrogram import Client, filters, idle
 import yt_dlp
 from pyrogram.types import (
     InlineKeyboardButton,
@@ -154,4 +154,7 @@ def bul(_, message):
         os.remove(thumb_name)
     except Exception as e:
         print(e)
-bot.run()
+        
+bot.start()
+print(bot.get_me().username)
+idle()
